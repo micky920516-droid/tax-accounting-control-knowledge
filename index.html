@@ -8,16 +8,16 @@
     body {
       margin: 0;
       font-family: Arial, "Noto Sans TC", sans-serif;
-      color: #1f2937;
       background: #eef2f7;
+      color: #1f2937;
       line-height: 1.7;
     }
 
     header {
       background: #12355b;
       color: white;
-      text-align: center;
       padding: 56px 20px;
+      text-align: center;
     }
 
     header h1 {
@@ -28,26 +28,12 @@
     header p {
       max-width: 760px;
       margin: 0 auto;
-      color: #e5edf7;
       font-size: 18px;
-    }
-
-    nav {
-      background: white;
-      padding: 14px 20px;
-      text-align: center;
-      border-bottom: 1px solid #dbe3ef;
-    }
-
-    nav a {
-      color: #12355b;
-      margin: 0 12px;
-      font-weight: bold;
-      text-decoration: none;
+      color: #e5edf7;
     }
 
     main {
-      max-width: 1080px;
+      max-width: 1000px;
       margin: 32px auto;
       padding: 0 20px;
     }
@@ -62,8 +48,8 @@
     }
 
     h2 {
-      color: #12355b;
       margin-top: 0;
+      color: #12355b;
     }
 
     .categories {
@@ -87,27 +73,29 @@
     }
 
     .article {
-      border: 1px solid #e5e7eb;
-      border-radius: 8px;
-      padding: 18px;
-      margin-bottom: 14px;
+      border-bottom: 1px solid #e5e7eb;
+      padding: 16px 0;
     }
 
-    .tag {
-      display: inline-block;
-      background: #e8f1ff;
-      color: #1d4ed8;
-      border-radius: 999px;
-      padding: 3px 8px;
-      font-size: 13px;
-      font-weight: bold;
-      margin-bottom: 8px;
+    .article:last-child {
+      border-bottom: none;
+    }
+
+    .article h3 {
+      margin: 0 0 6px;
+      font-size: 20px;
+    }
+
+    .article p {
+      margin: 0;
+      color: #4b5563;
     }
 
     .notice {
       background: #fff7ed;
       border-color: #fed7aa;
       color: #7c2d12;
+      font-size: 15px;
     }
 
     footer {
@@ -121,56 +109,69 @@
 <body>
   <header>
     <h1>財稅內控知識庫</h1>
-    <p>用白話整理稅務、會計、內控、內稽與 IPO 準備知識，協助企業主、財會人員與內部同仁快速查找重點。</p>
+    <p>
+      用白話整理稅務、會計、內控、內稽與 IPO 準備知識，
+      協助企業主、財會人員與內部同仁快速查找重點。
+    </p>
   </header>
-
-  <nav>
-    <a href="#categories">知識分類</a>
-    <a href="#articles">精選文章</a>
-    <a href="#notice">專業提醒</a>
-  </nav>
 
   <main>
     <section>
       <h2>網站定位</h2>
-      <p>這是一個會計師事務所風格的知識分享網站，先用簡單首頁練習 GitHub Pages，之後可以慢慢擴充成分類頁、文章頁與搜尋功能。</p>
+      <p>
+        這是一個會計師事務所風格的知識分享網站。
+        第一版先整理常見主題與文章方向，之後可以慢慢擴充成分類頁、文章頁與搜尋功能。
+      </p>
     </section>
 
-    <section id="categories">
+    <section>
       <h2>知識分類</h2>
       <div class="categories">
-        <div class="category"><strong>稅務</strong>營業稅、扣繳、申報與常見稅務風險。</div>
-        <div class="category"><strong>會計</strong>憑證、帳務、財報與月結流程。</div>
-        <div class="category"><strong>內控</strong>制度設計、核准權限、流程風險控管。</div>
-        <div class="category"><strong>內稽</strong>年度計畫、查核程序、缺失追蹤。</div>
-        <div class="category"><strong>IPO 準備</strong>財會資料、內控制度與上市櫃前整理。</div>
+        <div class="category">
+          <strong>稅務</strong>
+          營業稅、扣繳、申報與常見稅務風險。
+        </div>
+        <div class="category">
+          <strong>會計</strong>
+          憑證、帳務、財報與月結流程。
+        </div>
+        <div class="category">
+          <strong>內控</strong>
+          制度設計、核准權限與流程風險控管。
+        </div>
+        <div class="category">
+          <strong>內稽</strong>
+          年度計畫、查核程序與缺失追蹤。
+        </div>
+        <div class="category">
+          <strong>IPO 準備</strong>
+          財會資料、內控制度與上市櫃前整理。
+        </div>
       </div>
     </section>
 
-    <section id="articles">
+    <section>
       <h2>精選文章</h2>
 
       <div class="article">
-        <span class="tag">稅務</span>
         <h3>營業稅申報前要檢查哪些重點？</h3>
         <p>從發票、進項憑證、銷項收入與申報期限，整理常見檢查事項。</p>
       </div>
 
       <div class="article">
-        <span class="tag">會計</span>
         <h3>公司常見會計憑證有哪些？</h3>
         <p>說明發票、收據、合約、付款紀錄與內部核准文件的基本用途。</p>
       </div>
 
       <div class="article">
-        <span class="tag">內控</span>
         <h3>內控制度為什麼不是只有給稽核看的？</h3>
         <p>用白話說明內控如何協助公司降低錯誤、舞弊與作業風險。</p>
       </div>
     </section>
 
-    <section id="notice" class="notice">
-      本網站內容僅供一般知識分享，不構成正式稅務、會計、法律或投資建議。實際案件請洽專業會計師、律師或相關專業人員。
+    <section class="notice">
+      本網站內容僅供一般知識分享，不構成正式稅務、會計、法律或投資建議。
+      實際案件請洽專業會計師、律師或相關專業人員。
     </section>
   </main>
 
