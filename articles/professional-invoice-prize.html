@@ -67,6 +67,68 @@
       font-weight: bold;
     }
 
+    .flowchart {
+      background: #f8fafc;
+      border: 1px solid #dbe3ef;
+      border-radius: 8px;
+      padding: 24px;
+      margin: 28px 0;
+    }
+
+    .flowchart h2 {
+      margin-top: 0;
+      text-align: center;
+    }
+
+    .flow-step,
+    .flow-question,
+    .flow-result {
+      background: white;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      padding: 14px 16px;
+      margin: 0 auto;
+      max-width: 560px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+    }
+
+    .flow-question {
+      border-color: #93c5fd;
+      background: #eff6ff;
+      color: #1e3a8a;
+      font-weight: bold;
+    }
+
+    .flow-result {
+      text-align: left;
+    }
+
+    .flow-result strong {
+      color: #12355b;
+    }
+
+    .flow-arrow {
+      color: #64748b;
+      font-weight: bold;
+      text-align: center;
+      margin: 8px 0;
+    }
+
+    .flow-branches {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 12px;
+    }
+
+    .flow-note {
+      color: #475569;
+      font-size: 15px;
+      margin: 18px 0 0;
+      text-align: center;
+    }
+
     .notice {
       background: #fff7ed;
       border: 1px solid #fed7aa;
@@ -89,6 +151,20 @@
       padding: 28px;
       font-size: 14px;
     }
+
+    @media (max-width: 640px) {
+      article {
+        padding: 24px;
+      }
+
+      .flowchart {
+        padding: 18px;
+      }
+
+      .flow-branches {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 <body>
@@ -110,6 +186,41 @@
       <div class="highlight">
         重點是：不要只因為發票上有稅籍編號，就直接認定不能兌獎。真正要確認的是，買受人是否屬於不得領獎的營利事業身分。
       </div>
+
+      <section class="flowchart" aria-label="中獎發票兌領判斷流程">
+        <h2>中獎發票兌領判斷流程</h2>
+
+        <div class="flow-step">拿到中獎統一發票</div>
+        <div class="flow-arrow">↓</div>
+
+        <div class="flow-question">發票上有稅籍編號或統一編號嗎？</div>
+        <div class="flow-arrow">↓</div>
+
+        <div class="flow-step">先不要直接判定不能兌獎，先確認買受人身分</div>
+        <div class="flow-arrow">↓</div>
+
+        <div class="flow-question">買受人是營利事業嗎？</div>
+        <div class="flow-branches">
+          <div class="flow-result">
+            <strong>是</strong><br>
+            通常不得領獎，建議依財政部或國稅局規定再確認。
+          </div>
+          <div class="flow-result">
+            <strong>否，屬於執行業務者</strong><br>
+            準備文件，改走臨櫃或向受理單位人工確認。
+          </div>
+        </div>
+        <div class="flow-arrow">↓</div>
+
+        <div class="flow-step">帶發票正本、身分證明、執行業務者相關證明</div>
+        <div class="flow-arrow">↓</div>
+
+        <div class="flow-step">向兌獎單位或國稅局確認辦理方式</div>
+
+        <p class="flow-note">
+          發票上有稅籍編號，不代表一定不能兌獎；重點是確認買受人是否屬於不得領獎的營利事業。
+        </p>
+      </section>
 
       <h2>一、稅籍編號不一定等於營利事業統一編號</h2>
       <p>
